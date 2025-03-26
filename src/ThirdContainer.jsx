@@ -1,61 +1,52 @@
-import Money from "./assets/image-currency.jpg"
-import Restuarant from "./assets/image-restaurant.jpg"
-import Plane from "./assets/image-plane.jpg"
-import confetti from "./assets/image-confetti.jpg"
-function ThirdContainer(){
+import Money from "./assets/image-currency.jpg";
+import Restaurant from "./assets/image-restaurant.jpg";
+import Plane from "./assets/image-plane.jpg";
+import Confetti from "./assets/image-confetti.jpg";
 
-    return(<div className="grid grid-cols-1 md:grid-cols-4">
-        <div className=" bg-white mx-4" >
-       <div className="">  <img className="w-full p-0 h-44" src={Money} />
-       </div>
-        <div className="px-4">
-        <h1 className="text-xl font-bold mb-3">Recieve money in any currency wih no fees</h1>
-        <p>The world is getting smaller and we are becoming mre mobile
-            so why should you be forced to recieve money in a single 
-        </p>
-        </div>
-        
-        
-        </div>
-        <div className=" bg-white mx-4 ">
+function ThirdContainer() {
+  const cards = [
+    {
+      img: Money,
+      title: "Receive money in any currency with no fees",
+      description:
+        "The world is getting smaller, and we are becoming more mobile. So why should you be forced to receive money in a single currency?",
+    },
+    {
+      img: Restaurant,
+      title: "Treat yourself without worrying about money",
+      description:
+        "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you...",
+    },
+    {
+      img: Plane,
+      title: "Take your Easybank card wherever you go",
+      description:
+        "We want you to enjoy your travels. This is why we don't charge fees on purchases while you are abroad. We will even show you...",
+    },
+    {
+      img: Confetti,
+      title: "Our invite-only Beta accounts are now live",
+      description:
+        "After a lot of hard work by the whole team, we are excited to launch our closed beta. It's easy to request an invite through the site.",
+    },
+  ];
 
-        <img src={Restuarant} />
-        <div className="">
-        <h1 className="text-xl font-bold mb-3">Treat yourself without worrying about money</h1>
-        <p>Our simple budgeting feature allows you to seperate out your
-             spending and set reallistic limits each month. That means you..
-
-        </p>
-
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4  mt-8 mb-8">
+      {cards.map((card, index) => (
+        <div
+          key={index}
+          className="bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition duration-300"
+        >
+          <img src={card.img} alt={card.title} className="w-full h-52 object-cover" />
+          <div className="p-5">
+            <h1 className="text-lg font-bold mb-2">{card.title}</h1>
+            <p className="text-gray-600">{card.description}</p>
+          </div>
         </div>
-         </div>
-
-        <div className=" bg-white mx-4 ">
-        <img src={Plane}/>
-        <div className="px-4 ">
-    <h1 className="text-xl font-bold mb-3">Take your easybank card wherever you go</h1>
-        <p>we want you to enjoy your travels. this is why we dont charge fees 
-            on purchases while you are abroad We will even show you..
-        </p>
-        </div>
-        
-        
-        
-        </div>
-
-        <div className=" bg-white mx-4 ">
-        <img src={confetti}/>
-        <div className="px-4 rounded-full">
-        <h1 className="text-xl font-bold mb-3">Our invite only Beta accounts are now live</h1>
-        <p>After alot of hardwork by the whole team, we are excited to launch our closed beta. its easy to request an invite through the site</p>
-        
-        
-        </div>
-        
+      ))}
     </div>
-        
-
-        
-         </div>)
+  );
 }
+
 export default ThirdContainer;

@@ -18,15 +18,14 @@ export default {
         '96': '24rem', 
         '100': '500px', 
       },
-      color:{
-        primary:{
-        darkblue:'#2d314d',
-        limegreen:'#31d35c',
-        brightcyan:'#2bb7da',
-
-        },
-        
-  
+      colors: {
+        green: '#31CD78',   // Green
+        bluel: '#2BB7D4', // Blue
+        dark: '#2D314D',      // Dark Blue
+        lightgreen: '#32D069',    // Light Green
+        darkblue: '#2D314D',  // Dark Blue (Duplicate for clarity)
+        limegreen: '#31D35C', // Lime Green
+        brightcyan: '#2BB7DA' // Bright Cyan
       },
     },
   },

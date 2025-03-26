@@ -4,14 +4,13 @@ import Onboarding from './assets/icon-onboarding.svg'
 import api from './assets/icon-api.svg'
 
 function Secondcontainer(){
-
     return(<div className='bg-gray-100 p-3'>
-        <h1 className="text-4xl text-start">Why choose EasyBank?</h1>
+        <h1 className="flex justify-center text-4xl text-justify">Why choose EasyBank?</h1>
         <br></br>
-        <p className="text-start mb-3">We leverage open banking to turn your bank account
+        <p className="flex justify-center mb-3">We leverage open banking to turn your bank account
          into your financial Hub,<br /> Control your finances like never before</p>
          <br />
-         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 ">
             <div>
                 <image className='flex justify-center'><img src={OnlineBanking} /></image>
                 <h2 className="text-3xl mb-3">Online banking</h2>
@@ -41,7 +40,8 @@ function Secondcontainer(){
          </div>
 
 
-
-    </div>)
+        <br />
+    </div>
+    )
 }
 export default Secondcontainer;

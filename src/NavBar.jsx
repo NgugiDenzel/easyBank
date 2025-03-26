@@ -5,7 +5,7 @@ import Logo from './assets/logo.svg'
 
 function NavBar(){
 
-    return (<nav className="bg-gray-100 p-4 z-10 mb-10 ">
+    return (<nav className="bg-gray-100 p-4 ">
         <div className="container mx-auto flex justify-between  items-center ">
             <a href="#" ><img src={Logo} alt='image'/> </a>
             <div className="hidden md:flex space-x-2">
@@ -19,7 +19,7 @@ function NavBar(){
 
 
             </div>
-            <button className='bg-green-500 rounded-full py-3 px-4 cursor pointer text-white'>request invite</button>
+            <button className='bg-brightcyan rounded-full py-3 px-4 cursor pointer text-white'>request invite</button>
 
             <div className="md:hidden">
                 <button id="nav-toggle" className="text-gray-300 focus:outline-none"> 
